@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Users, Award, BookOpen, Target } from 'lucide-react';
 import { initScrollAnimations } from '../utils/gsapAnimations';
+import { CountUp } from '../components/CountUp';
 
 export default function About() {
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function About() {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center fade-in-section">
-            <h1 className="text-5xl md:text-7xl font-black text-[#d9fb06] mb-6 uppercase">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-[#d9fb06] mb-6 uppercase leading-tight">
               About Bluewhale Publications
             </h1>
             <p className="text-xl text-white/80 leading-relaxed">
@@ -122,16 +123,14 @@ export default function About() {
         <div className="container mx-auto px-6">
           <div className="stagger-cards grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '135+', label: 'Books Published' },
-              { number: '6+', label: 'Years Experience' },
-              { number: '105+', label: 'Happy Authors' },
-              { number: '6+', label: 'Awards Won' },
+              { number: 135, suffix: '+', label: 'Books Published' },
+              { number: 6, suffix: '+', label: 'Years Experience' },
+              { number: 105, suffix: '+', label: 'Happy Authors' },
+              { number: 6, suffix: '+', label: 'Awards Won' },
             ].map((stat, index) => (
               <div key={index} className="card-item text-center">
-                <div className="text-5xl md:text-6xl font-black text-[#d9fb06] mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-white/80 text-lg">{stat.label}</div>
+                <CountUp end={stat.number} suffix={stat.suffix} duration={2500} />
+                <div className="text-white/80 text-lg mt-2">{stat.label}</div>
               </div>
             ))}
           </div>

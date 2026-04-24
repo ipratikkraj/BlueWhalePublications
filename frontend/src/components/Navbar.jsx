@@ -19,8 +19,6 @@ export const Navbar = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/services', label: 'Services' },
-    { path: '/authors', label: 'Authors' },
-    { path: '/blog', label: 'Blog' },
     { path: '/contact', label: 'Contact' },
   ];
 
@@ -61,12 +59,6 @@ export const Navbar = () => {
                 )}
               </Link>
             ))}
-            <Link
-              to="/submit"
-              className="btn-primary bg-[#d9fb06] text-[#1a1c1b] px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform"
-            >
-              Submit Manuscript
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -96,13 +88,6 @@ export const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/submit"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block w-full text-center bg-[#d9fb06] text-[#1a1c1b] px-6 py-3 rounded-full font-semibold text-sm"
-            >
-              Submit Manuscript
-            </Link>
           </div>
         )}
       </div>

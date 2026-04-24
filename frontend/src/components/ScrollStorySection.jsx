@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Lightbulb, FileText, Edit3, Globe, TrendingUp, userRoundCheck, bookText, printer  } from 'lucide-react';
+import { Lightbulb, FileText, Edit3, Globe, TrendingUp, UserRoundCheck, BookText, Printer } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,7 +10,7 @@ const storyStages = [
     id: 1,
     title: 'AUTHOR REGISTRATION',
     description: 'Sign up on our platform to begin your publishing journey.',
-    icon: userRoundCheck ,
+    icon: UserRoundCheck,
     color: '#d9fb06',
   },
   {
@@ -31,14 +31,14 @@ const storyStages = [
     id: 4,
     title: 'COVER & BOOK DESIGN',
     description: 'We create a compelling cover along with professional layout, spine, and back design.',
-    icon: bookText,
-    color: '#3f4816',
+    icon: BookText,
+    color: '#d9fb06',
   },
   {
     id: 5,
     title: 'PRINTING & PRODUCTION',
     description: 'Your book is prepared and sent for high-quality printing.',
-    icon: printer,
+    icon: Printer,
     color: '#d9fb06',
   },
   {
@@ -191,3 +191,4 @@ export const ScrollStorySection = () => {
     </section>
   );
 };
+

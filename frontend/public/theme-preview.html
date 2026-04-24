@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluewhale Publications - Theme Preview</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', Arial, sans-serif; }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        h1 { text-align: center; margin-bottom: 40px; font-size: 2.5rem; }
+        
+        .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        
+        .theme-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .theme-header {
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .theme-preview {
+            height: 400px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .preview-nav {
+            display: flex;
+            gap: 20px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .preview-hero {
+            flex: 1;
+            border-radius: 8px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .preview-title {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        
+        .preview-text {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .preview-button {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            width: fit-content;
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .color-box {
+            flex: 1;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        /* Theme 1: Deep Ocean (Dark) */
+        .theme1-dark .theme-header { background: linear-gradient(135deg, #004EE0, #0066FF); color: white; }
+        .theme1-dark .theme-preview { background: #0A1628; }
+        .theme1-dark .preview-nav { background: rgba(227, 242, 255, 0.05); color: #E3F2FF; }
+        .theme1-dark .preview-hero { background: linear-gradient(135deg, rgba(0, 78, 224, 0.15), rgba(0, 102, 255, 0.1)); }
+        .theme1-dark .preview-title { color: #E3F2FF; }
+        .theme1-dark .preview-text { color: #B8D4F1; }
+        .theme1-dark .preview-button { background: linear-gradient(135deg, #004EE0, #0066FF); color: white; }
+
+        /* Theme 2: Sky Blue (Light) */
+        .theme2-light .theme-header { background: linear-gradient(135deg, #004EE0, #0066FF); color: white; }
+        .theme2-light .theme-preview { background: #F8FBFF; }
+        .theme2-light .preview-nav { background: white; color: #004EE0; box-shadow: 0 2px 8px rgba(0,78,224,0.1); }
+        .theme2-light .preview-hero { background: linear-gradient(135deg, #E3F2FF, #F0F7FF); }
+        .theme2-light .preview-title { color: #004EE0; }
+        .theme2-light .preview-text { color: #0A1628; }
+        .theme2-light .preview-button { background: linear-gradient(135deg, #004EE0, #0066FF); color: white; }
+
+        /* Theme 3: Royal Blue (Dark with Accent) */
+        .theme3-dark .theme-header { background: linear-gradient(135deg, #004EE0, #0066FF); color: white; }
+        .theme3-dark .theme-preview { background: #0D1B2A; }
+        .theme3-dark .preview-nav { background: rgba(0, 78, 224, 0.2); color: #E3F2FF; }
+        .theme3-dark .preview-hero { background: linear-gradient(135deg, #004EE0, #003BA5); }
+        .theme3-dark .preview-title { color: white; }
+        .theme3-dark .preview-text { color: #E3F2FF; }
+        .theme3-dark .preview-button { background: #E3F2FF; color: #004EE0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Bluewhale Publications - Theme Options</h1>
+        
+        <h2 style="margin: 40px 0 20px; text-align: center; color: #666;">DARK THEMES</h2>
+        <div class="theme-grid">
+            <!-- Theme 1: Deep Ocean Dark -->
+            <div class="theme-card theme1-dark">
+                <div class="theme-header">Option 1: Deep Ocean (Dark)</div>
+                <div class="theme-preview">
+                    <div class="preview-nav">
+                        <span>Home</span>
+                        <span>About</span>
+                        <span>Services</span>
+                        <span>Contact</span>
+                    </div>
+                    <div class="preview-hero">
+                        <div class="preview-title">Stories That Make Waves</div>
+                        <div class="preview-text">Bluewhale Publications empowers authors to transform their vision into reality</div>
+                        <a href="#" class="preview-button">Get Started</a>
+                    </div>
+                </div>
+                <div class="color-palette">
+                    <div class="color-box" style="background: #0A1628;">#0A1628<br>Background</div>
+                    <div class="color-box" style="background: linear-gradient(135deg, #004EE0, #0066FF);">Gradient<br>Primary</div>
+                    <div class="color-box" style="background: #E3F2FF;">#E3F2FF<br>Text</div>
+                    <div class="color-box" style="background: #B8D4F1;">#B8D4F1<br>Muted</div>
+                </div>
+            </div>
+
+            <!-- Theme 3: Royal Blue Dark -->
+            <div class="theme-card theme3-dark">
+                <div class="theme-header">Option 2: Royal Blue (Dark Bold)</div>
+                <div class="theme-preview">
+                    <div class="preview-nav">
+                        <span>Home</span>
+                        <span>About</span>
+                        <span>Services</span>
+                        <span>Contact</span>
+                    </div>
+                    <div class="preview-hero">
+                        <div class="preview-title">Stories That Make Waves</div>
+                        <div class="preview-text">Bluewhale Publications empowers authors to transform their vision into reality</div>
+                        <a href="#" class="preview-button">Get Started</a>
+                    </div>
+                </div>
+                <div class="color-palette">
+                    <div class="color-box" style="background: #0D1B2A;">#0D1B2A<br>Background</div>
+                    <div class="color-box" style="background: linear-gradient(135deg, #004EE0, #003BA5);">Gradient<br>Hero</div>
+                    <div class="color-box" style="background: #E3F2FF;">#E3F2FF<br>Button</div>
+                    <div class="color-box" style="background: white;">White<br>Text</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="margin: 40px 0 20px; text-align: center; color: #666;">LIGHT THEME</h2>
+        <div class="theme-grid">
+            <!-- Theme 2: Sky Blue Light -->
+            <div class="theme-card theme2-light">
+                <div class="theme-header">Option 3: Sky Blue (Light & Airy)</div>
+                <div class="theme-preview">
+                    <div class="preview-nav">
+                        <span>Home</span>
+                        <span>About</span>
+                        <span>Services</span>
+                        <span>Contact</span>
+                    </div>
+                    <div class="preview-hero">
+                        <div class="preview-title">Stories That Make Waves</div>
+                        <div class="preview-text">Bluewhale Publications empowers authors to transform their vision into reality</div>
+                        <a href="#" class="preview-button">Get Started</a>
+                    </div>
+                </div>
+                <div class="color-palette">
+                    <div class="color-box" style="background: #F8FBFF; color: #004EE0; text-shadow: none;">#F8FBFF<br>Background</div>
+                    <div class="color-box" style="background: linear-gradient(135deg, #E3F2FF, #F0F7FF); color: #004EE0; text-shadow: none;">Gradient<br>Sections</div>
+                    <div class="color-box" style="background: #004EE0;">#004EE0<br>Primary</div>
+                    <div class="color-box" style="background: white; color: #004EE0; text-shadow: none; border: 2px solid #E3F2FF;">White<br>Cards</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: #f5f5f5; border-radius: 12px;">
+            <h3 style="margin-bottom: 20px; font-size: 1.5rem;">📝 Which theme do you prefer?</h3>
+            <p style="color: #666; margin-bottom: 10px;">Let me know which option you'd like to implement:</p>
+            <p style="font-size: 1.1rem; font-weight: bold;">
+                <span style="color: #004EE0;">Option 1: Deep Ocean (Dark)</span> | 
+                <span style="color: #0066FF;">Option 2: Royal Blue (Dark Bold)</span> | 
+                <span style="color: #004EE0;">Option 3: Sky Blue (Light)</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

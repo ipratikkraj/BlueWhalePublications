@@ -144,7 +144,7 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-black text-[#d9fb06] mb-6 uppercase">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#d9fb06] mb-6 uppercase leading-tight">
                   Contact Information
                 </h2>
                 <p className="text-white/80 leading-relaxed mb-8">
@@ -158,9 +158,9 @@ export default function Contact() {
                   <div className="w-12 h-12 bg-[#d9fb06] rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-[#1a1c1b]" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h3 className="text-white font-bold mb-1">Email</h3>
-                    <p className="text-[#888680]">publicationsbluewhale@gmail.com</p>
+                    <p className="text-[#888680] break-all text-sm sm:text-base">publicationsbluewhale@gmail.com</p>
                     {/* <p className="text-[#888680]">submissions@bluewhalepublications.com</p> */}
                   </div>
                 </div>
@@ -169,9 +169,9 @@ export default function Contact() {
                   <div className="w-12 h-12 bg-[#d9fb06] rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-[#1a1c1b]" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h3 className="text-white font-bold mb-1">Phone</h3>
-                    <p className="text-[#888680]">+91 8252395376</p>
+                    <p className="text-[#888680] break-all">+91 8252395376</p>
                     <p className="text-[#888680] text-sm">Mon-Sat: 9am - 9pm IST</p>
                   </div>
                 </div>
@@ -180,9 +180,9 @@ export default function Contact() {
                   <div className="w-12 h-12 bg-[#d9fb06] rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-[#1a1c1b]" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h3 className="text-white font-bold mb-1">Office</h3>
-                    <p className="text-[#888680]">U Block, Sector 24</p>
+                    <p className="text-[#888680] break-words">U Block, Sector 24</p>
                     <p className="text-[#888680]">Gurugram, Haryana 122002</p>
                     <p className="text-[#888680]">India</p>
                   </div>

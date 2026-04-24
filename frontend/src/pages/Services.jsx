@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FileEdit, Palette, Rocket, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import { FileEdit, Palette, Rocket, TrendingUp, CheckCircle, ArrowRight, Download } from 'lucide-react';
 import { initScrollAnimations } from '../utils/gsapAnimations';
 
 export default function Services() {
@@ -77,10 +77,18 @@ export default function Services() {
             <h1 className="text-5xl md:text-7xl font-black text-[#d9fb06] mb-6 uppercase">
               Our Services
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
+            <p className="text-xl text-white/80 leading-relaxed mb-8">
               Comprehensive publishing solutions tailored to your unique needs. 
               From manuscript to bestseller, we've got you covered.
             </p>
+            <a
+              href="/Bluewhale-Publications-Brochure.pdf"
+              download="Bluewhale-Publications-Brochure.pdf"
+              className="inline-flex items-center bg-[#d9fb06] text-[#1a1c1b] px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all group"
+            >
+              <Download className="mr-2 w-5 h-5" />
+              Download Brochure
+            </a>
           </div>
         </div>
       </section>
