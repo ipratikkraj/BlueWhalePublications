@@ -17,7 +17,7 @@ export default function About() {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center fade-in-section">
-            <h1 className="text-5xl md:text-7xl font-black text-[#d9fb06] mb-6 uppercase">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-[#d9fb06] mb-6 uppercase leading-tight">
               About Bluewhale Publications
             </h1>
             <p className="text-xl text-white/80 leading-relaxed">
