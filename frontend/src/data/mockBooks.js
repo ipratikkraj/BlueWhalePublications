@@ -53,6 +53,61 @@ export const mockBooks = [
     published: "2024",
     rating: 4.8,
     reviews: 178
+  },
+  {
+    id: 6,
+    title: "Architects of Decay",
+    author: "Das & Sim",
+    genre: "Mystery Thriller",
+    cover: "/books/architects-of-decay.jpg",
+    description: "When Ordinary Man Began to Notice. A riveting mystery thriller that unravels the hidden forces shaping society, revealing truths that were meant to stay buried.",
+    published: "2024",
+    rating: 4.6,
+    reviews: 142
+  },
+  {
+    id: 7,
+    title: "श्री ख्वाजू श्याम बाबा",
+    author: "Dr. Abhinav Prasad Kashyap",
+    genre: "Spiritual",
+    cover: "/books/khwaju-shyam-baba.jpg",
+    description: "हारे के सहारे - एक प्रेरणादायक आध्यात्मिक यात्रा जो श्रद्धा, भक्ति और जीवन के संघर्षों में आशा की किरण दिखाती है।",
+    published: "2024",
+    rating: 4.9,
+    reviews: 196
+  },
+  {
+    id: 8,
+    title: "Care Without Illusion",
+    author: "Nupur Jain",
+    genre: "Social Justice",
+    cover: "/books/care-without-illusion.jpg",
+    description: "Restorative Justice Through the Lens of Nonviolent Communication. A groundbreaking exploration of compassionate justice that transforms how we approach conflict and healing.",
+    published: "2024",
+    rating: 4.7,
+    reviews: 134
+  },
+  {
+    id: 9,
+    title: "Paigaam",
+    author: "Abhinav Bhatnagar",
+    genre: "Historical Fiction",
+    cover: "/books/paigaam.jpg",
+    description: "A compelling historical narrative that weaves together tales of courage, sacrifice, and the enduring power of a message that transcends time and boundaries.",
+    published: "2024",
+    rating: 4.8,
+    reviews: 167
+  },
+  {
+    id: 10,
+    title: "Reflections in Silence",
+    author: "Madupu Chakradhar Rao",
+    genre: "Philosophy",
+    cover: "/books/reflections-in-silence.jpg",
+    description: "A contemplative journey through the quiet moments of life, exploring profound philosophical insights that emerge when we pause to listen to the silence within.",
+    published: "2024",
+    rating: 4.7,
+    reviews: 121
   }
 ];
 
