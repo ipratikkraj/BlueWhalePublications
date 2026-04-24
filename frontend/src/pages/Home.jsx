@@ -45,13 +45,12 @@ export default function Home() {
               We provide a platform that nurtures creativity and delivers quality publishing."
             </p>
             
-            {/* CTA Buttons - Hidden for now */}
-            {/* <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                to="/submit"
+                to="/contact"
                 className="btn-primary group inline-flex items-center justify-center bg-[#d9fb06] text-[#1a1c1b] px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all"
               >
-                Publish Your Story
+                Get Started
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -60,7 +59,7 @@ export default function Home() {
               >
                 Explore Services
               </Link>
-            </div> */}
+            </div>
           </div>
         </div>
 
@@ -200,8 +199,8 @@ export default function Home() {
         </div>
       </section> */}
 
-      {/* CTA Section - Hidden for now */}
-      {/* <section className="py-20 bg-gradient-to-r from-[#3f4816] to-[#1a1c1b] relative overflow-hidden">
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-[#3f4816] to-[#1a1c1b] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-[#d9fb06] rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#d9fb06] rounded-full blur-3xl" />
@@ -215,14 +214,14 @@ export default function Home() {
             Join hundreds of successful authors who trusted us with their stories
           </p>
           <Link
-            to="/submit"
+            to="/contact"
             className="inline-flex items-center bg-[#d9fb06] text-[#1a1c1b] px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition-all group"
           >
-            Submit Your Manuscript
+            Contact Us
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
