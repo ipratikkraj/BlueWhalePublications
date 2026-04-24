@@ -40,8 +40,9 @@ export default function Home() {
             </h1>
             
             <p className="body-large text-white/80 mb-8 leading-relaxed max-w-2xl">
-              Bluewhale Publications empowers authors to transform their creative vision into published masterpieces. 
-              From manuscript to market, we're with you every step of the way.
+              "At Bluewhale Publications, every voice has the power to create waves.
+              From debut authors to seasoned writers,
+              We provide a platform that nurtures creativity and delivers quality publishing."
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
