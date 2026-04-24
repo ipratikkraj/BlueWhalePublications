@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluewhale - Blue Theme Preview</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', Arial, sans-serif; 
+            background: #1a1c1b;
+            color: white;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: #1a1c1b;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 78, 224, 0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #004EE0, #0066FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #004EE0;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 40px;
+            background: linear-gradient(135deg, rgba(0, 78, 224, 0.05), rgba(0, 102, 255, 0.02));
+        }
+        
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #004EE0, #0066FF, #0088FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: #B8D4F1;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #004EE0, #0066FF);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+        }
+        
+        .btn-secondary {
+            border: 2px solid #004EE0;
+            color: #004EE0;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 15px;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #004EE0, #0066FF);
+            color: white;
+        }
+        
+        /* Publishing Process */
+        .process-section {
+            padding: 80px 40px;
+            background: #1a1c1b;
+        }
+        
+        .process-section h2 {
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #004EE0, #0066FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .process-card {
+            background: #302f2c;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 78, 224, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .process-card:hover {
+            border-color: #004EE0;
+            transform: translateY(-5px);
+        }
+        
+        .process-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #004EE0, #0066FF);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .process-card h3 {
+            color: #004EE0;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .process-card p {
+            color: #B8D4F1;
+        }
+        
+        /* Books Section */
+        .books-section {
+            padding: 80px 40px;
+            background: #302f2c;
+        }
+        
+        .books-section h2 {
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #004EE0, #0066FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .book-card {
+            background: #1a1c1b;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-10px);
+            border-color: #004EE0;
+            box-shadow: 0 20px 40px rgba(0, 78, 224, 0.3);
+        }
+        
+        .book-cover {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #004EE0, #0066FF);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .book-info {
+            padding: 20px;
+        }
+        
+        .book-info h4 {
+            color: #004EE0;
+            margin-bottom: 10px;
+        }
+        
+        .book-info p {
+            color: #888680;
+            font-size: 0.9rem;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 40px;
+            background: linear-gradient(135deg, #003BA5, #004EE0);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #E3F2FF;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0A1628;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .footer p {
+            color: #B8D4F1;
+        }
+        
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Bluewhale Publications</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Stories That<br>Make Waves.</h1>
+        <p>At Bluewhale Publications, every voice has the power to create waves. From debut authors to seasoned writers, we provide a platform that nurtures creativity.</p>
+        <a href="#" class="btn-primary">Get Started</a>
+        <a href="#" class="btn-secondary">Explore Services</a>
+    </section>
+    
+    <!-- Publishing Process -->
+    <section class="process-section">
+        <h2>Our Publishing Process</h2>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-icon">1</div>
+                <h3>Author Registration</h3>
+                <p>Sign up on our platform to begin your publishing journey.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon">2</div>
+                <h3>Manuscript Submission</h3>
+                <p>Submit your manuscript for professional evaluation.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon">3</div>
+                <h3>Editing & Design</h3>
+                <p>We refine your work to ensure clarity, quality, and impact.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Books Section -->
+    <section class="books-section">
+        <h2>Featured Publications</h2>
+        <div class="books-grid">
+            <div class="book-card">
+                <div class="book-cover">📚</div>
+                <div class="book-info">
+                    <h4>Soil to Serpent</h4>
+                    <p>Prof. (Dr.) Anu Prabha</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="book-cover">📖</div>
+                <div class="book-info">
+                    <h4>किरदारों के पीछे</h4>
+                    <p>Raj Biduri</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="book-cover">📕</div>
+                <div class="book-info">
+                    <h4>Phantom Consciousness</h4>
+                    <p>Shrishty Choubey</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="book-cover">📘</div>
+                <div class="book-info">
+                    <h4>Mastering Quiet Chaos</h4>
+                    <p>Shrishty Choubey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div>
+                <div class="stat-number">135+</div>
+                <div class="stat-label">Books Published</div>
+            </div>
+            <div>
+                <div class="stat-number">6+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div>
+                <div class="stat-number">105+</div>
+                <div class="stat-label">Happy Authors</div>
+            </div>
+            <div>
+                <div class="stat-number">6+</div>
+                <div class="stat-label">Awards Won</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Bluewhale Publications. All rights reserved.</p>
+    </footer>
+    
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-btn">💬</div>
+</body>
+</html>
