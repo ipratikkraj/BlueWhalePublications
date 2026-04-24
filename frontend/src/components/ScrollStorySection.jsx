@@ -8,36 +8,43 @@ gsap.registerPlugin(ScrollTrigger);
 const storyStages = [
   {
     id: 1,
-    title: 'IDEA',
-    description: 'Every great book begins with an idea',
+    title: 'AUTHOR REGISTRATION',
+    description: 'Sign up on our platform to begin your publishing journey.',
     icon: Lightbulb,
     color: '#d9fb06',
   },
   {
     id: 2,
-    title: 'CONTENT CREATION',
-    description: 'Transform thoughts into compelling narratives',
+    title: 'MANUSCRIPT SUBMISSION',
+    description: 'Submit your manuscript for professional evaluation.',
     icon: FileText,
-    color: '#3f4816',
+    color: '#d9fb06',
   },
   {
     id: 3,
-    title: 'EDITING & DESIGN',
-    description: 'Polish your manuscript to perfection',
+    title: 'EDITING & PROOFREADING',
+    description: 'We refine your work to ensure clarity, quality, and impact.',
     icon: Edit3,
     color: '#d9fb06',
   },
   {
     id: 4,
-    title: 'PUBLISH & DISTRIBUTE',
-    description: 'Share your story with the world',
+    title: 'COVER & BOOK DESIGN',
+    description: 'We create a compelling cover along with professional layout, spine, and back design.',
     icon: Globe,
     color: '#3f4816',
   },
   {
     id: 5,
-    title: 'AUTHOR SUCCESS',
-    description: 'Build your legacy and connect with readers',
+    title: 'PRINTING & PRODUCTION',
+    description: 'Your book is prepared and sent for high-quality printing.',
+    icon: TrendingUp,
+    color: '#d9fb06',
+  },
+  {
+    id: 6,
+    title: 'PUBLICATION & DELIVERY',
+    description: 'Your book is officially published and delivered to you—ready to reach readers.',
     icon: TrendingUp,
     color: '#d9fb06',
   },
@@ -123,10 +130,10 @@ export const ScrollStorySection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 fade-in-section">
           <h2 className="text-5xl md:text-7xl font-black text-[#d9fb06] mb-6 uppercase tracking-tight">
-            Your Publishing Journey
+            Our Publishing Process
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            From concept to bestseller, we guide you through every stage
+            From thought to bestseller, we guide you at every step.
           </p>
         </div>
 
@@ -153,7 +160,7 @@ export const ScrollStorySection = () => {
                       <Icon className="w-16 h-16 text-[#1a1c1b]" strokeWidth={2.5} />
                     </div>
                     <div
-                      className="absolute inset-0 rounded-full blur-2xl opacity-50"
+                      className="absolute inset-0 rounded-full blur-2xl "
                       style={{ backgroundColor: stage.color }}
                     />
                   </div>
