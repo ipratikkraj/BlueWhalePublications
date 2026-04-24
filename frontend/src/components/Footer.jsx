@@ -21,13 +21,13 @@ export const Footer = () => {
               Transforming ideas into published masterpieces. We help authors bring their stories to life.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-[#888680] hover:text-[#d9fb06] transition-colors">
+              <a href="https://www.facebook.com/share/18ScYqbWYX/" className="text-[#888680] hover:text-[#d9fb06] transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-[#888680] hover:text-[#d9fb06] transition-colors">
+              {/* <a href="#" className="text-[#888680] hover:text-[#d9fb06] transition-colors">
                 <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-[#888680] hover:text-[#d9fb06] transition-colors">
+              </a> */}
+              <a href="https://www.instagram.com/bluewhale_publications?igsh=MWpjNWdkZ3BvcmxnZw==" className="text-[#888680] hover:text-[#d9fb06] transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="#" className="text-[#888680] hover:text-[#d9fb06] transition-colors">
@@ -50,7 +50,7 @@ export const Footer = () => {
                   Our Services
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/authors" className="text-[#888680] hover:text-[#d9fb06] text-sm transition-colors">
                   Our Authors
                 </Link>
@@ -59,7 +59,7 @@ export const Footer = () => {
                 <Link to="/blog" className="text-[#888680] hover:text-[#d9fb06] text-sm transition-colors">
                   Blog & Resources
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/submit" className="text-[#888680] hover:text-[#d9fb06] text-sm transition-colors">
                   Submit Manuscript
@@ -86,15 +86,15 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3 text-[#888680] text-sm">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>123 Publishing Lane, New York, NY 10001</span>
+                <span>U Block, Sector 24, Gurugram, Haryana 122002, India</span>
               </li>
               <li className="flex items-center space-x-3 text-[#888680] text-sm">
                 <Phone className="w-5 h-5 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 8252395376</span>
               </li>
               <li className="flex items-center space-x-3 text-[#888680] text-sm">
                 <Mail className="w-5 h-5 flex-shrink-0" />
-                <span>info@bluewhalepublications.com</span>
+                <span>publicationsbluewhale@gmail.com</span>
               </li>
             </ul>
           </div>

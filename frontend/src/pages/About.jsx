@@ -21,7 +21,7 @@ export default function About() {
               About Bluewhale Publications
             </h1>
             <p className="text-xl text-white/80 leading-relaxed">
-              For over 15 years, we've been transforming manuscripts into bestsellers, 
+              For over 6 years, we've been transforming manuscripts into bestsellers, 
               helping authors navigate the complex world of publishing with confidence and success.
             </p>
           </div>
@@ -38,9 +38,9 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-white/80 leading-relaxed">
                 <p>
-                  Founded in 2009, Bluewhale Publications began with a simple mission: to give 
+                  Bluewhale Publications began with a simple mission: to give 
                   every author a voice. What started as a small independent press has grown into 
-                  a full-service publishing house with a portfolio of over 500 published titles.
+                  a full-service publishing house with a portfolio of over 135 titles.
                 </p>
                 <p>
                   We believe that great stories deserve to be told. Whether you're a first-time 
@@ -79,24 +79,24 @@ export default function About() {
           <div className="stagger-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: BookOpen,
-                title: 'Quality First',
-                description: 'Every book we publish meets the highest editorial standards',
+                icon: Users,
+                title: 'Author First, Always',
+                description: 'Every decision we make starts with the author. We respect your voice, your vision, and your ownership at every step of the journey.',
               },
               {
-                icon: Users,
-                title: 'Author-Centric',
-                description: 'Your success is our success. We put authors at the heart of everything',
-              },
+                icon: BookOpen,
+                title: 'Quality Without Compromise',
+                description: 'We are committed to delivering books that meet professional standards—through careful editing, thoughtful design, and attention to every detail.',
+              },              
               {
                 icon: Award,
-                title: 'Excellence',
-                description: 'We strive for excellence in every aspect of the publishing process',
+                title: 'Creativity with Purpose',
+                description: 'We combine creative design and storytelling with strategic thinking—so your book doesn’t just exist, it stands out.',
               },
               {
                 icon: Target,
-                title: 'Innovation',
-                description: 'Embracing new technologies and methods to stay ahead',
+                title: 'Growth for Every Author',
+                description: 'Publishing is just the beginning. We aim to support authors in building their identity, reach, and long-term success.',
               },
             ].map((value, index) => {
               const Icon = value.icon;
@@ -122,10 +122,10 @@ export default function About() {
         <div className="container mx-auto px-6">
           <div className="stagger-cards grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '500+', label: 'Books Published' },
-              { number: '15+', label: 'Years Experience' },
-              { number: '250+', label: 'Happy Authors' },
-              { number: '50+', label: 'Awards Won' },
+              { number: '135+', label: 'Books Published' },
+              { number: '6+', label: 'Years Experience' },
+              { number: '105+', label: 'Happy Authors' },
+              { number: '6+', label: 'Awards Won' },
             ].map((stat, index) => (
               <div key={index} className="card-item text-center">
                 <div className="text-5xl md:text-6xl font-black text-[#d9fb06] mb-2">
