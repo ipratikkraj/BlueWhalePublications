@@ -36,7 +36,7 @@ export default function Home() {
             </div>
             
             <h1 className="hero-title text-6xl md:text-8xl font-black text-[#d9fb06] mb-6 leading-tight uppercase">
-              Turn Ideas Into Books
+              Stories That Make Waves.
             </h1>
             
             <p className="body-large text-white/80 mb-8 leading-relaxed max-w-2xl">
