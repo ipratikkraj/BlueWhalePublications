@@ -160,8 +160,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">Email</h3>
-                    <p className="text-[#888680]">info@bluewhalepublications.com</p>
-                    <p className="text-[#888680]">submissions@bluewhalepublications.com</p>
+                    <p className="text-[#888680]">publicationsbluewhale@gmail.com</p>
+                    {/* <p className="text-[#888680]">submissions@bluewhalepublications.com</p> */}
                   </div>
                 </div>
 
@@ -171,8 +171,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">Phone</h3>
-                    <p className="text-[#888680]">+1 (555) 123-4567</p>
-                    <p className="text-[#888680] text-sm">Mon-Fri: 9am - 6pm EST</p>
+                    <p className="text-[#888680]">+91 8252395376</p>
+                    <p className="text-[#888680] text-sm">Mon-Sat: 9am - 9pm IST</p>
                   </div>
                 </div>
 
@@ -182,9 +182,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">Office</h3>
-                    <p className="text-[#888680]">123 Publishing Lane</p>
-                    <p className="text-[#888680]">New York, NY 10001</p>
-                    <p className="text-[#888680]">United States</p>
+                    <p className="text-[#888680]">U Block, Sector 24</p>
+                    <p className="text-[#888680]">Gurugram, Haryana 122002</p>
+                    <p className="text-[#888680]">India</p>
                   </div>
                 </div>
               </div>
@@ -193,13 +193,13 @@ export default function Contact() {
                 <h3 className="text-2xl font-bold text-[#d9fb06] mb-4">Office Hours</h3>
                 <div className="space-y-2 text-white/80">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="text-[#d9fb06]">9:00 AM - 6:00 PM</span>
+                    <span>Monday - Saturday</span>
+                    <span className="text-[#d9fb06]">9:00 AM - 9:00 PM</span>
                   </div>
-                  <div className="flex justify-between">
+                  {/* <div className="flex justify-between">
                     <span>Saturday</span>
                     <span className="text-[#d9fb06]">10:00 AM - 2:00 PM</span>
-                  </div>
+                  </div> */}
                   <div className="flex justify-between">
                     <span>Sunday</span>
                     <span className="text-[#888680]">Closed</span>

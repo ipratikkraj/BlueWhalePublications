@@ -109,23 +109,27 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12 fade-in-section">
             <h2 className="text-4xl md:text-6xl font-black text-[#d9fb06] mb-4 uppercase">
-              Why Choose Bluewhale?
+              The Bluewhale Advantage
             </h2>
           </div>
 
           <div className="stagger-cards grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Expert Editorial Team',
-                description: 'Professional editors with decades of experience in diverse genres',
+                title: 'Publication-Ready Writing',
+                description: 'We shape your manuscript into its strongest form through professional editing & proofreading—ensuring your book meets industry standards & truly resonates with readers.',
               },
               {
-                title: 'Premium Design',
-                description: 'Award-winning designers create stunning covers that sell',
+                title: 'Designed to Stand Out',
+                description: 'From striking covers to polished layouts, we create books that not only read well but look exceptional—because presentation plays a key role in grabbing attention.',
               },
               {
-                title: 'Global Distribution',
-                description: 'Your book reaches readers worldwide through major retailers',
+                title: 'You Stay in Control',
+                description: 'Your vision leads the process. We collaborate with you at every step, keeping everything transparent and ensuring the final book reflects your voice—not ours.',
+              },
+              {
+                title: 'From Manuscript to Market',
+                description: 'We handle the complete journey—from submission to printing—so you can focus on being an author while we take care of turning your work into a finished book.',
               },
             ].map((feature, index) => (
               <div
@@ -144,7 +148,7 @@ export default function Home() {
       </section>
 
       {/* Blog Preview Section */}
-      <section className="py-20 bg-[#1a1c1b]">
+      {/* <section className="py-20 bg-[#1a1c1b]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12 fade-in-section">
             <h2 className="text-4xl md:text-6xl font-black text-[#d9fb06] mb-4 uppercase">
@@ -193,7 +197,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#3f4816] to-[#1a1c1b] relative overflow-hidden">
@@ -204,7 +208,7 @@ export default function Home() {
         
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl md:text-6xl font-black text-[#d9fb06] mb-6 uppercase">
-            Start Your Author Journey Today
+            Start Your Journey Today
           </h2>
           <p className="text-white/80 text-xl mb-8 max-w-2xl mx-auto">
             Join hundreds of successful authors who trusted us with their stories
