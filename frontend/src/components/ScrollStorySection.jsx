@@ -32,7 +32,7 @@ const storyStages = [
     title: 'COVER & BOOK DESIGN',
     description: 'We create a compelling cover along with professional layout, spine, and back design.',
     icon: BookText,
-    color: '#3f4816',
+    color: '#d9fb06',
   },
   {
     id: 5,
@@ -160,7 +160,7 @@ export const ScrollStorySection = () => {
                       <Icon className="w-16 h-16 text-[#1a1c1b]" strokeWidth={2.5} />
                     </div>
                     <div
-                      className="absolute inset-0 rounded-full blur-2xl "
+                      className="absolute inset-0 rounded-full blur-2xl opacity-50"
                       style={{ backgroundColor: stage.color }}
                     />
                   </div>
