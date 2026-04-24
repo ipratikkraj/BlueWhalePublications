@@ -59,12 +59,12 @@ export const Footer = () => {
                 <Link to="/blog" className="text-[#888680] hover:text-[#d9fb06] text-sm transition-colors">
                   Blog & Resources
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <Link to="/submit" className="text-[#888680] hover:text-[#d9fb06] text-sm transition-colors">
                   Submit Manuscript
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
