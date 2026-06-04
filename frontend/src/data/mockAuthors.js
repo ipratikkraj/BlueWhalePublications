@@ -37,7 +37,7 @@ export const mockAuthors = [
     id: 4,
     name: "Dr. Amitabha Gupta",
     bio: "Marketing strategist and educator simplifying complex business concepts for the next generation of marketers and entrepreneurs.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    image: "/authors/dr-amitabha-gupta.jpg",
     books: 1,
     genre: "Business & Marketing",
     social: {
@@ -46,3 +46,4 @@ export const mockAuthors = [
     }
   }
 ];
+;
