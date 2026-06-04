@@ -75,7 +75,8 @@ export default function Authors() {
                   <img
                     src={author.image}
                     alt={author.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                    style={{ objectPosition: 'center 20%' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1b] via-transparent to-transparent" />
                 </div>
