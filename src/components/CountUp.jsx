@@ -6,6 +6,32 @@ export const CountUp = ({ end, duration = 2000, suffix = '', prefix = '' }) => {
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
+    const animateCount = () => {
+      const startTime = Date.now();
+      const startValue = 0;
+      const endValue = parseInt(end);
+
+      const animate = () => {
+        const currentTime = Date.now();
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function for smooth animation
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const currentCount = Math.floor(startValue + (endValue - startValue) * easeOutQuart);
+
+        setCount(currentCount);
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        } else {
+          setCount(endValue);
+        }
+      };
+
+      requestAnimationFrame(animate);
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -18,42 +44,17 @@ export const CountUp = ({ end, duration = 2000, suffix = '', prefix = '' }) => {
       { threshold: 0.3 }
     );
 
-    if (countRef.current) {
-      observer.observe(countRef.current);
+    const currentRef = countRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (countRef.current) {
-        observer.unobserve(countRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, [hasAnimated]);
-
-  const animateCount = () => {
-    const startTime = Date.now();
-    const startValue = 0;
-    const endValue = parseInt(end);
-
-    const animate = () => {
-      const currentTime = Date.now();
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-
-      // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(startValue + (endValue - startValue) * easeOutQuart);
-
-      setCount(currentCount);
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        setCount(endValue);
-      }
-    };
-
-    requestAnimationFrame(animate);
-  };
+  }, [hasAnimated, end, duration]);
 
   return (
     <div ref={countRef} className="text-5xl md:text-6xl font-black text-[#d9fb06]">
