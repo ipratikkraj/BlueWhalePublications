@@ -87,7 +87,7 @@ export default function Home() {
           </div>
 
           <div className="stagger-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredBooks.map((book) => (
+            {featuredBooks.slice(0, 8).map((book) => (
               <BookCard key={book.id} book={book} />
             ))}
           </div>

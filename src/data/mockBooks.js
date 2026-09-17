@@ -34,14 +34,91 @@ export const mockBooks = [
   },
   {
     id: 4,
-    title: "Marketing Decoded",
-    author: "Dr. Amitabha Gupta",
-    genre: "Business & Marketing",
-    cover: "/books/marketing-decoded.jpg",
-    description: "Question and Answers - The definitive guide to modern marketing strategies. Dr. Gupta demystifies complex marketing concepts through practical Q&A format, making it essential for professionals and students alike.",
+    title: "Anthropocene Biodiversity",
+    author: "Dr. Smita",
+    genre: "Environmental Science",
+    cover: "/books/biodiversity.jpeg",
+    description: "An insightful exploration into urban wetland ecosystems, shedding light on biodiversity challenges and modern conservation efforts in the Anthropocene era.",
     published: "2024",
     rating: 4.9,
-    reviews: 324
+    reviews: 185
+  },
+  {
+    id: 5,
+    title: "The Robber's Hill Chambal and the Fugitive",
+    author: "Ravi Ranjan Goswami",
+    genre: "Thriller & Crime Fiction",
+    cover: "/books/chambal.jpeg",
+    description: "A gripping tale set along the dramatic terrain of the Chambal river, where a fugitive faces an intense choice between sin, survival, and ultimate redemption.",
+    published: "2024",
+    rating: 4.8,
+    reviews: 210
+  },
+  {
+    id: 6,
+    title: "Dhaara",
+    author: "Dr. Smita",
+    genre: "Poetry & Nature",
+    cover: "/books/dhaara.jpeg",
+    description: "A beautifully evocative collection celebrating the flow of life, nature, and human resilience like a timeless, cascading mountain stream.",
+    published: "2024",
+    rating: 4.9,
+    reviews: 174
+  },
+  {
+    id: 7,
+    title: "Latitude of Love",
+    author: "Capt. Abhishek Chaudhary",
+    genre: "Romance & Journey",
+    cover: "/books/latitude-love.jpeg",
+    description: "A heartwarming romantic narrative set against maritime horizons, showing how true connection transcends geographic distances and stormy seas.",
+    published: "2024",
+    rating: 4.9,
+    reviews: 298
+  },
+  {
+    id: 8,
+    title: "मन के हारे हार, मन के जीते जीत",
+    author: "कैप्टन निर्मल कुमार जैन",
+    genre: "Self-Help & Motivation",
+    cover: "/books/man-ke-hare.jpeg",
+    description: "An empowering motivational masterpiece guiding readers through overcoming mental barriers and unlocking inner strength to triumph over life's challenges.",
+    published: "2024",
+    rating: 5.0,
+    reviews: 340
+  },
+  {
+    id: 9,
+    title: "Existence Over Shadows",
+    author: "Sahil Mushtaq Bhat",
+    genre: "Philosophy & Life",
+    cover: "/books/over-shadows.jpeg",
+    description: "A profound philosophical reflection exploring identity, purpose, and stepping into light beyond the quiet shadows of human existence.",
+    published: "2024",
+    rating: 4.8,
+    reviews: 162
+  },
+  {
+    id: 10,
+    title: "आज़ादी का रक्त-अभिषेक",
+    author: "Suresh Goel",
+    genre: "History & Patriotism",
+    cover: "/books/rakat.jpeg",
+    description: "A stirring historical tribute commemorating the courageous freedom fighters whose blood and sacrifices forged the freedom of the nation.",
+    published: "2024",
+    rating: 4.9,
+    reviews: 245
+  },
+  {
+    id: 11,
+    title: "Unbound: The Becoming",
+    author: "Sulekha M.V.",
+    genre: "Literary Fiction",
+    cover: "/books/unbound.jpeg",
+    description: "A moving story of self-discovery, transformation, and breaking free from societal expectations to embrace one's true calling.",
+    published: "2024",
+    rating: 4.9,
+    reviews: 215
   }
 ];
 

@@ -66,7 +66,7 @@ export default function Authors() {
           </div>
 
           <div className="stagger-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mockAuthors.slice(0, 6).map((author) => (
+            {mockAuthors.map((author) => (
               <div
                 key={author.id}
                 className="card-item group bg-[#1a1c1b] rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 border border-[#3f4816]/30 hover:border-[#d9fb06]/50"
