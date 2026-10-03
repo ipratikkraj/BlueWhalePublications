@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Users, Award, BookOpen, Target } from 'lucide-react';
+import { Users, Award, BookOpen, Target, Sparkles, CheckCircle2 } from 'lucide-react';
 import { initScrollAnimations } from '../utils/gsapAnimations';
 import { CountUp } from '../components/CountUp';
 
@@ -9,72 +9,77 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#1a1c1b] pt-24">
+    <div className="min-h-screen bg-[#EEF5FF] text-[#0B2E73] pt-24">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#d9fb06] rounded-full blur-3xl" />
+      <section className="relative py-20 bg-gradient-to-b from-[#0B2E73] to-[#123B8F] text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#0756D9] rounded-full blur-3xl" />
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center fade-in-section">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-[#d9fb06] mb-6 uppercase leading-tight">
+            <span className="text-[#DCE9FF] text-xs md:text-sm font-extrabold uppercase tracking-widest bg-[#0756D9]/30 px-4 py-1.5 rounded-full mb-4 inline-block">
+              OUR MISSION & VISION
+            </span>
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 uppercase leading-tight tracking-tight">
               About Bluewhale Publications
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
-              For over 6 years, we've been transforming manuscripts into bestsellers, 
-              helping authors navigate the complex world of publishing with confidence and success.
+            <p className="text-lg md:text-xl text-[#DCE9FF] leading-relaxed max-w-3xl mx-auto">
+              For over 6 years, we've been transforming manuscripts into bestsellers, helping authors navigate the complex world of publishing with confidence and success.
             </p>
           </div>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-[#302f2c]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="fade-in-section">
-              <h2 className="text-4xl md:text-5xl font-black text-[#d9fb06] mb-6 uppercase">
+              <span className="text-[#0756D9] text-xs font-bold uppercase tracking-widest bg-[#EEF5FF] px-3.5 py-1 rounded-md mb-3 inline-block">
+                WHO WE ARE
+              </span>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-[#0B2E73] mb-6 uppercase tracking-tight">
                 Our Story
               </h2>
-              <div className="space-y-4 text-white/80 leading-relaxed">
+              <div className="space-y-4 text-[#123B8F]/80 leading-relaxed text-base">
                 <p>
-                  Bluewhale Publications began with a simple mission: to give 
-                  every author a voice. What started as a small independent press has grown into 
-                  a full-service publishing house with a portfolio of over 135 titles.
+                  Bluewhale Publications began with a simple mission: to give every author a voice. What started as a dedicated independent press has grown into a full-service publishing house with a portfolio of over 500+ published titles.
                 </p>
                 <p>
-                  We believe that great stories deserve to be told. Whether you're a first-time 
-                  author or an established writer, we provide the expertise, support, and resources 
-                  needed to bring your vision to life.
+                  We believe that great stories deserve to be told. Whether you're a first-time author or an established writer, we provide the expertise, support, and distribution resources needed to bring your vision to life.
                 </p>
                 <p>
-                  Our team of experienced editors, designers, and marketing professionals work 
-                  collaboratively with each author to ensure their book not only meets industry 
-                  standards but exceeds reader expectations.
+                  Our team of experienced editors, cover designers, and marketing professionals work collaboratively with each author to ensure their book not only meets industry standards but exceeds reader expectations.
                 </p>
               </div>
             </div>
-            
+
             <div className="fade-in-section">
-              <img
-                src="https://images.unsplash.com/photo-1544185310-0b3cf501672b"
-                alt="Publishing House"
-                className="w-full h-96 object-cover rounded-lg shadow-2xl"
-              />
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#DCE9FF]">
+                <img
+                  src="https://images.unsplash.com/photo-1544185310-0b3cf501672b"
+                  alt="Publishing House Workspace"
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B2E73]/60 via-transparent to-transparent" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-[#1a1c1b]">
+      <section className="py-20 bg-[#EEF5FF]">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12 fade-in-section">
-            <h2 className="text-4xl md:text-6xl font-black text-[#d9fb06] mb-4 uppercase">
-              Our Values
+          <div className="text-center mb-16 fade-in-section">
+            <span className="text-[#0756D9] text-xs font-extrabold uppercase tracking-widest bg-[#DCE9FF] px-4 py-1.5 rounded-full mb-3 inline-block">
+              WHAT DRIVES US
+            </span>
+            <h2 className="text-4xl md:text-6xl font-extrabold text-[#0B2E73] mb-4 uppercase tracking-tight">
+              Our Core Values
             </h2>
-            <p className="text-white/70 text-lg">Principles that guide everything we do</p>
+            <p className="text-[#123B8F]/80 text-lg">Principles that guide everything we do</p>
           </div>
 
           <div className="stagger-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -88,29 +93,29 @@ export default function About() {
                 icon: BookOpen,
                 title: 'Quality Without Compromise',
                 description: 'We are committed to delivering books that meet professional standards—through careful editing, thoughtful design, and attention to every detail.',
-              },              
+              },
               {
                 icon: Award,
                 title: 'Creativity with Purpose',
-                description: 'We combine creative design and storytelling with strategic thinking—so your book doesn’t just exist, it stands out.',
+                description: 'We combine creative design and storytelling with strategic thinking—so your book doesn’t just exist, it stands out in the market.',
               },
               {
                 icon: Target,
                 title: 'Growth for Every Author',
-                description: 'Publishing is just the beginning. We aim to support authors in building their identity, reach, and long-term success.',
+                description: 'Publishing is just the beginning. We aim to support authors in building their identity, reach, and long-term writing career.',
               },
             ].map((value, index) => {
               const Icon = value.icon;
               return (
                 <div
                   key={index}
-                  className="card-item bg-[#302f2c] p-8 rounded-lg hover:scale-105 transition-all duration-300 border border-[#3f4816]/30 hover:border-[#d9fb06]/50"
+                  className="card-item bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-[#DCE9FF] hover:border-[#0756D9]/40 hover:-translate-y-1"
                 >
-                  <div className="w-16 h-16 bg-[#d9fb06] rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-8 h-8 text-[#1a1c1b]" strokeWidth={2.5} />
+                  <div className="w-14 h-14 bg-[#0756D9] rounded-xl flex items-center justify-center mb-6 shadow-md shadow-[#0756D9]/30">
+                    <Icon className="w-7 h-7 text-white" strokeWidth={2.2} />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#d9fb06] mb-3">{value.title}</h3>
-                  <p className="text-white/70 leading-relaxed">{value.description}</p>
+                  <h3 className="text-xl font-bold text-[#0B2E73] mb-3">{value.title}</h3>
+                  <p className="text-[#123B8F]/80 text-sm leading-relaxed">{value.description}</p>
                 </div>
               );
             })}
@@ -119,18 +124,18 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-[#3f4816] to-[#1a1c1b]">
+      <section className="py-20 bg-gradient-to-r from-[#0B2E73] to-[#123B8F] text-white">
         <div className="container mx-auto px-6">
           <div className="stagger-cards grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: 135, suffix: '+', label: 'Books Published' },
+              { number: 700, suffix: '+', label: 'Books Published' },
               { number: 6, suffix: '+', label: 'Years Experience' },
-              { number: 105, suffix: '+', label: 'Happy Authors' },
-              { number: 6, suffix: '+', label: 'Awards Won' },
+              { number: 500, suffix: '+', label: 'Happy Authors' },
+              { number: 50, suffix: '+', label: 'Genres Covered' },
             ].map((stat, index) => (
               <div key={index} className="card-item text-center">
-                <CountUp end={stat.number} suffix={stat.suffix} duration={2500} />
-                <div className="text-white/80 text-lg mt-2">{stat.label}</div>
+                <CountUp end={stat.number} suffix={stat.suffix} duration={2500} className="text-4xl md:text-5xl font-black text-white" />
+                <div className="text-[#DCE9FF] text-base md:text-lg mt-2 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -138,18 +143,16 @@ export default function About() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-[#302f2c]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center fade-in-section">
-            <h2 className="text-4xl md:text-5xl font-black text-[#d9fb06] mb-6 uppercase">
+          <div className="max-w-3xl mx-auto text-center fade-in-section">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#0B2E73] mb-6 uppercase tracking-tight">
               Our Mission
             </h2>
-            <p className="text-xl text-white/80 leading-relaxed mb-8">
-              To empower authors worldwide by providing world-class publishing services that 
-              transform manuscripts into impactful, professionally crafted books that inspire, 
-              educate, and entertain readers across the globe.
+            <p className="text-lg md:text-xl text-[#123B8F]/90 leading-relaxed mb-8 font-medium">
+              To empower authors worldwide by providing world-class publishing services that transform manuscripts into impactful, professionally crafted books that inspire, educate, and entertain readers across the globe.
             </p>
-            <div className="h-1 w-32 bg-[#d9fb06] mx-auto" />
+            <div className="h-1.5 w-24 bg-[#0756D9] mx-auto rounded-full" />
           </div>
         </div>
       </section>

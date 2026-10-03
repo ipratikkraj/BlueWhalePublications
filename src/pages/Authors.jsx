@@ -3,7 +3,7 @@ import { BookCard } from '../components/BookCard';
 import { mockBooks } from '../data/mockBooks';
 import { mockAuthors } from '../data/mockAuthors';
 import { initScrollAnimations } from '../utils/gsapAnimations';
-import { Search, Filter, X } from 'lucide-react';
+import { Search, Filter, X, BookOpen } from 'lucide-react';
 
 export default function Authors() {
   const [selectedGenre, setSelectedGenre] = useState('All');
@@ -17,12 +17,10 @@ export default function Authors() {
   useEffect(() => {
     let filtered = mockBooks;
 
-    // Filter by genre
     if (selectedGenre !== 'All') {
       filtered = filtered.filter((book) => book.genre === selectedGenre);
     }
 
-    // Filter by search query
     if (searchQuery) {
       filtered = filtered.filter(
         (book) =>
@@ -37,30 +35,36 @@ export default function Authors() {
   const genres = ['All', ...new Set(mockBooks.map((book) => book.genre))];
 
   return (
-    <div className="min-h-screen bg-[#1a1c1b] pt-24">
+    <div className="min-h-screen bg-[#EEF5FF] text-[#0B2E73] pt-24">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#d9fb06] rounded-full blur-3xl" />
+      <section className="relative py-20 bg-gradient-to-b from-[#0B2E73] to-[#123B8F] text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#0756D9] rounded-full blur-3xl" />
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center fade-in-section">
-            <h1 className="text-5xl md:text-7xl font-black text-[#d9fb06] mb-6 uppercase">
+            <span className="text-[#DCE9FF] text-xs md:text-sm font-extrabold uppercase tracking-widest bg-[#0756D9]/30 px-4 py-1.5 rounded-full mb-4 inline-block">
+              AUTHORS & CATALOG
+            </span>
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight">
               Our Authors & Books
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
-              Discover talented authors and their incredible stories published through Bluewhale
+            <p className="text-lg md:text-xl text-[#DCE9FF] leading-relaxed max-w-2xl mx-auto">
+              Discover talented authors and their incredible stories published through Bluewhale Publications.
             </p>
           </div>
         </div>
       </section>
 
       {/* Featured Authors Section */}
-      <section className="py-20 bg-[#302f2c]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12 fade-in-section">
-            <h2 className="text-4xl md:text-6xl font-black text-[#d9fb06] mb-4 uppercase">
+          <div className="text-center mb-16 fade-in-section">
+            <span className="text-[#0756D9] text-xs font-extrabold uppercase tracking-widest bg-[#EEF5FF] px-4 py-1.5 rounded-full mb-3 inline-block">
+              FEATURED WRITERS
+            </span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#0B2E73] mb-4 uppercase tracking-tight">
               Meet Our Authors
             </h2>
           </div>
@@ -69,27 +73,28 @@ export default function Authors() {
             {mockAuthors.map((author) => (
               <div
                 key={author.id}
-                className="card-item group bg-[#1a1c1b] rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 border border-[#3f4816]/30 hover:border-[#d9fb06]/50"
+                className="card-item group bg-[#EEF5FF] rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-[#DCE9FF] hover:border-[#0756D9]/40 hover:-translate-y-1"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-64 overflow-hidden bg-[#DCE9FF]">
                   <img
                     src={author.image}
                     alt={author.name}
-                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     style={{ objectPosition: 'center 20%' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1b] via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B2E73]/60 via-transparent to-transparent" />
                 </div>
-                
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-[#d9fb06] mb-2 group-hover:text-white transition-colors">
+
+                <div className="p-6 bg-white">
+                  <h3 className="text-2xl font-bold text-[#0B2E73] mb-1 group-hover:text-[#0756D9] transition-colors">
                     {author.name}
                   </h3>
-                  <p className="text-[#888680] text-sm mb-3 uppercase tracking-wider">
+                  <p className="text-[#0756D9] text-xs font-bold uppercase tracking-wider mb-3">
                     {author.genre} Author
                   </p>
-                  <p className="text-white/70 text-sm mb-4 line-clamp-3">{author.bio}</p>
-                  <div className="text-[#d9fb06] text-sm font-semibold">
+                  <p className="text-[#123B8F]/80 text-sm mb-4 line-clamp-3 leading-relaxed">{author.bio}</p>
+                  <div className="text-[#0B2E73] text-xs font-bold flex items-center pt-3 border-t border-[#DCE9FF]">
+                    <BookOpen className="w-4 h-4 mr-1.5 text-[#0756D9]" />
                     {author.books} Published Books
                   </div>
                 </div>
@@ -100,31 +105,34 @@ export default function Authors() {
       </section>
 
       {/* Books Section */}
-      <section className="py-20 bg-[#1a1c1b]">
+      <section className="py-24 bg-[#EEF5FF]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12 fade-in-section">
-            <h2 className="text-4xl md:text-6xl font-black text-[#d9fb06] mb-4 uppercase">
+            <span className="text-[#0756D9] text-xs font-extrabold uppercase tracking-widest bg-[#DCE9FF] px-4 py-1.5 rounded-full mb-3 inline-block">
+              COMPLETE COLLECTION
+            </span>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0B2E73] mb-4 uppercase tracking-tight">
               Published Books
             </h2>
-            <p className="text-white/70 text-lg">Browse our collection of published works</p>
+            <p className="text-[#123B8F]/80 text-lg">Browse our collection of published works</p>
           </div>
 
           {/* Filters */}
           <div className="mb-12 flex flex-col md:flex-row gap-4 items-center justify-between">
             {/* Search */}
             <div className="relative w-full md:w-96">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#888680]" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#123B8F]/60" />
               <input
                 type="text"
                 placeholder="Search books or authors..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-[#302f2c] text-white pl-12 pr-12 py-3 rounded-full border border-[#3f4816]/30 focus:border-[#d9fb06] focus:outline-none transition-colors"
+                className="w-full bg-white text-[#0B2E73] pl-12 pr-12 py-3.5 rounded-xl border border-[#DCE9FF] focus:border-[#0756D9] focus:outline-none transition-colors shadow-sm text-sm"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#888680] hover:text-[#d9fb06]"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#123B8F]/60 hover:text-[#0756D9]"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -133,15 +141,15 @@ export default function Authors() {
 
             {/* Genre Filter */}
             <div className="flex items-center gap-2 flex-wrap justify-center">
-              <Filter className="w-5 h-5 text-[#888680]" />
+              <Filter className="w-4 h-4 text-[#123B8F]/60 mr-1" />
               {genres.map((genre) => (
                 <button
                   key={genre}
                   onClick={() => setSelectedGenre(genre)}
-                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                     selectedGenre === genre
-                      ? 'bg-[#d9fb06] text-[#1a1c1b]'
-                      : 'bg-[#302f2c] text-white/80 hover:text-[#d9fb06] border border-[#3f4816]/30'
+                      ? 'bg-[#0756D9] text-white shadow-md'
+                      : 'bg-white text-[#0B2E73] hover:bg-[#DCE9FF] border border-[#DCE9FF]'
                   }`}
                 >
                   {genre}
@@ -158,8 +166,8 @@ export default function Authors() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-20">
-              <p className="text-white/70 text-lg">No books found matching your criteria</p>
+            <div className="text-center py-20 bg-white rounded-2xl border border-[#DCE9FF]">
+              <p className="text-[#123B8F]/80 text-lg font-medium">No books found matching your criteria</p>
             </div>
           )}
         </div>

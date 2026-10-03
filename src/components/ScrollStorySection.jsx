@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Lightbulb, FileText, Edit3, Globe, TrendingUp, UserRoundCheck, BookText, Printer } from 'lucide-react';
+import { FileText, Edit3, Globe, UserRoundCheck, BookText, Printer } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,42 +11,42 @@ const storyStages = [
     title: 'AUTHOR REGISTRATION',
     description: 'Sign up on our platform to begin your publishing journey.',
     icon: UserRoundCheck,
-    color: '#d9fb06',
+    color: '#0756D9',
   },
   {
     id: 2,
     title: 'MANUSCRIPT SUBMISSION',
     description: 'Submit your manuscript for professional evaluation.',
     icon: FileText,
-    color: '#d9fb06',
+    color: '#0756D9',
   },
   {
     id: 3,
     title: 'EDITING & PROOFREADING',
     description: 'We refine your work to ensure clarity, quality, and impact.',
     icon: Edit3,
-    color: '#d9fb06',
+    color: '#0756D9',
   },
   {
     id: 4,
     title: 'COVER & BOOK DESIGN',
     description: 'We create a compelling cover along with professional layout, spine, and back design.',
     icon: BookText,
-    color: '#d9fb06',
+    color: '#0756D9',
   },
   {
     id: 5,
     title: 'PRINTING & PRODUCTION',
     description: 'Your book is prepared and sent for high-quality printing.',
     icon: Printer,
-    color: '#d9fb06',
+    color: '#0756D9',
   },
   {
     id: 6,
     title: 'PUBLICATION & DELIVERY',
     description: 'Your book is officially published and delivered to you—ready to reach readers.',
     icon: Globe,
-    color: '#d9fb06',
+    color: '#0756D9',
   },
 ];
 
@@ -56,13 +56,14 @@ export const ScrollStorySection = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      stagesRef.current.forEach((stage, index) => {
+      stagesRef.current.forEach((stage) => {
+        if (!stage) return;
         gsap.fromTo(
           stage,
           {
             opacity: 0,
-            y: 100,
-            scale: 0.8,
+            y: 80,
+            scale: 0.9,
           },
           {
             opacity: 1,
@@ -72,14 +73,13 @@ export const ScrollStorySection = () => {
             ease: 'power3.out',
             scrollTrigger: {
               trigger: stage,
-              start: 'top 80%',
-              end: 'top 30%',
+              start: 'top 85%',
+              end: 'top 35%',
               scrub: 1,
             },
           }
         );
 
-        // Icon rotation animation
         const icon = stage.querySelector('.stage-icon');
         if (icon) {
           gsap.to(icon, {
@@ -88,7 +88,7 @@ export const ScrollStorySection = () => {
             ease: 'power2.inOut',
             scrollTrigger: {
               trigger: stage,
-              start: 'top 60%',
+              start: 'top 65%',
               end: 'top 40%',
               scrub: 1,
             },
@@ -96,9 +96,8 @@ export const ScrollStorySection = () => {
         }
       });
 
-      // Book spine animation
       gsap.to('.book-spine', {
-        scaleX: 1.2,
+        scaleY: 1.1,
         duration: 0.3,
         ease: 'power2.inOut',
         scrollTrigger: {
@@ -116,28 +115,31 @@ export const ScrollStorySection = () => {
   return (
     <section
       ref={containerRef}
-      className="scroll-story-container relative py-20 bg-[#1a1c1b] overflow-hidden"
+      className="scroll-story-container relative py-24 bg-gradient-to-b from-[#EEF5FF] via-white to-[#EEF5FF] overflow-hidden"
     >
       {/* Decorative background */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#d9fb06] rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#3f4816] rounded-full blur-3xl" />
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-10 left-10 w-96 h-96 bg-[#DCE9FF] rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#0756D9]/10 rounded-full blur-3xl" />
       </div>
 
       {/* Book spine visual element */}
-      <div className="book-spine absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#d9fb06]/20 via-[#3f4816]/40 to-[#d9fb06]/20 transform -translate-x-1/2 hidden md:block" />
+      <div className="book-spine absolute left-1/2 top-32 bottom-32 w-1 bg-gradient-to-b from-[#0756D9]/20 via-[#0756D9] to-[#123B8F]/20 transform -translate-x-1/2 hidden md:block rounded-full" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16 fade-in-section">
-          <h2 className="text-5xl md:text-7xl font-black text-[#d9fb06] mb-6 uppercase tracking-tight">
+        <div className="text-center mb-20 fade-in-section">
+          <span className="inline-block text-[#0756D9] text-sm font-bold uppercase tracking-widest bg-[#DCE9FF] px-4 py-1.5 rounded-full mb-4">
+            Step by Step Journey
+          </span>
+          <h2 className="text-4xl md:text-6xl font-extrabold text-[#0B2E73] mb-6 tracking-tight uppercase">
             Our Publishing Process
           </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            From thought to bestseller, we guide you at every step.
+          <p className="text-lg md:text-xl text-[#123B8F]/80 max-w-2xl mx-auto font-medium">
+            From thought to bestseller, we guide you at every step with complete care and transparency.
           </p>
         </div>
 
-        <div className="space-y-32">
+        <div className="space-y-24">
           {storyStages.map((stage, index) => {
             const Icon = stage.icon;
             const isEven = index % 2 === 0;
@@ -148,38 +150,35 @@ export const ScrollStorySection = () => {
                 ref={(el) => (stagesRef.current[index] = el)}
                 className={`flex flex-col ${
                   isEven ? 'md:flex-row' : 'md:flex-row-reverse'
-                } items-center gap-12 md:gap-20`}
+                } items-center gap-8 md:gap-16`}
               >
                 {/* Icon Section */}
                 <div className="flex-1 flex justify-center">
                   <div className="relative">
                     <div
-                      className="stage-icon w-32 h-32 rounded-full flex items-center justify-center relative z-10"
+                      className="stage-icon w-28 h-28 md:w-32 md:h-32 rounded-3xl flex items-center justify-center relative z-10 shadow-xl"
                       style={{ backgroundColor: stage.color }}
                     >
-                      <Icon className="w-16 h-16 text-[#1a1c1b]" strokeWidth={2.5} />
+                      <Icon className="w-14 h-14 text-white" strokeWidth={2.2} />
                     </div>
                     <div
-                      className="absolute inset-0 rounded-full blur-2xl "
+                      className="absolute inset-0 rounded-3xl blur-xl opacity-40"
                       style={{ backgroundColor: stage.color }}
                     />
                   </div>
                 </div>
 
                 {/* Content Section */}
-                <div className="flex-1 text-center md:text-left">
-                  <div className="inline-block mb-3">
-                    <span className="text-[#888680] text-sm font-bold tracking-wider">
-                      STAGE {stage.id}
+                <div className="flex-1 text-center md:text-left bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-[#DCE9FF] max-w-lg">
+                  <div className="inline-block mb-2">
+                    <span className="text-[#0756D9] text-xs font-extrabold tracking-widest uppercase bg-[#EEF5FF] px-3 py-1 rounded-md">
+                      STAGE 0{stage.id}
                     </span>
                   </div>
-                  <h3
-                    className="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tight"
-                    style={{ color: stage.color }}
-                  >
+                  <h3 className="text-2xl md:text-3xl font-extrabold text-[#0B2E73] mb-3 uppercase tracking-tight">
                     {stage.title}
                   </h3>
-                  <p className="text-white/80 text-lg leading-relaxed max-w-md">
+                  <p className="text-[#123B8F]/80 text-base leading-relaxed">
                     {stage.description}
                   </p>
                 </div>
@@ -191,4 +190,3 @@ export const ScrollStorySection = () => {
     </section>
   );
 };
-
