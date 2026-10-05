@@ -137,44 +137,44 @@ export default function Home() {
       {/* Feature Bar (Below Hero - White background with blue outline icons) */}
       <section className="bg-white border-b border-gray-200 py-8 relative z-20 shadow-sm">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
-            <div className="flex items-center space-x-4 pt-4 sm:pt-0 sm:px-4">
-              <div className="w-12 h-12 rounded-xl bg-[#EEF5FF] flex items-center justify-center text-[#0756D9] flex-shrink-0">
-                <Edit3 className="w-6 h-6" />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 p-2 sm:p-0 border-b sm:border-b-0 border-r sm:border-r border-gray-100 pb-3 sm:pb-0">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#EEF5FF] flex items-center justify-center text-[#0756D9] flex-shrink-0">
+                <Edit3 className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <h4 className="font-bold text-[#1a1d20] text-sm">Manuscript Support</h4>
-                <p className="text-xs text-gray-500">From idea to final draft</p>
+                <h4 className="font-bold text-[#1a1d20] text-xs sm:text-sm leading-tight">Manuscript Support</h4>
+                <p className="text-[10px] sm:text-xs text-gray-500 mt-0.5">From idea to final draft</p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 pt-4 sm:pt-0 sm:px-4">
-              <div className="w-12 h-12 rounded-xl bg-[#EEF5FF] flex items-center justify-center text-[#0756D9] flex-shrink-0">
-                <BookOpen className="w-6 h-6" />
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 p-2 sm:p-0 border-b sm:border-b-0 lg:border-r border-gray-100 pb-3 sm:pb-0">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#EEF5FF] flex items-center justify-center text-[#0756D9] flex-shrink-0">
+                <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <h4 className="font-bold text-[#1a1d20] text-sm">Professional Publishing</h4>
-                <p className="text-xs text-gray-500">World-class quality</p>
+                <h4 className="font-bold text-[#1a1d20] text-xs sm:text-sm leading-tight">Professional Publishing</h4>
+                <p className="text-[10px] sm:text-xs text-gray-500 mt-0.5">World-class quality</p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 pt-4 sm:pt-0 sm:px-4">
-              <div className="w-12 h-12 rounded-xl bg-[#EEF5FF] flex items-center justify-center text-[#0756D9] flex-shrink-0">
-                <Megaphone className="w-6 h-6" />
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 p-2 sm:p-0 border-r sm:border-r border-gray-100 pt-2 sm:pt-0">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#EEF5FF] flex items-center justify-center text-[#0756D9] flex-shrink-0">
+                <Megaphone className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <h4 className="font-bold text-[#1a1d20] text-sm">Marketing & Distribution</h4>
-                <p className="text-xs text-gray-500">Online & Offline</p>
+                <h4 className="font-bold text-[#1a1d20] text-xs sm:text-sm leading-tight">Marketing & Distribution</h4>
+                <p className="text-[10px] sm:text-xs text-gray-500 mt-0.5">Online & Offline</p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 pt-4 sm:pt-0 sm:px-4">
-              <div className="w-12 h-12 rounded-xl bg-[#EEF5FF] flex items-center justify-center text-[#0756D9] flex-shrink-0">
-                <Users className="w-6 h-6" />
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 p-2 sm:p-0 pt-2 sm:pt-0">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#EEF5FF] flex items-center justify-center text-[#0756D9] flex-shrink-0">
+                <Users className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <h4 className="font-bold text-[#1a1d20] text-sm">Author Branding</h4>
-                <p className="text-xs text-gray-500">Because your story matters</p>
+                <h4 className="font-bold text-[#1a1d20] text-xs sm:text-sm leading-tight">Author Branding</h4>
+                <p className="text-[10px] sm:text-xs text-gray-500 mt-0.5">Because your story matters</p>
               </div>
             </div>
           </div>
@@ -192,67 +192,67 @@ export default function Home() {
       </section>
 
       {/* Book Fair Highlight Section */}
-      <section className="py-20 bg-[#f8fafc] border-b border-gray-200">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12">
-            <div className="lg:col-span-5 bg-gradient-to-br from-[#123B8F] to-[#0B2E73] p-8 md:p-12 text-white flex flex-col justify-between relative overflow-hidden">
+      <section className="py-8 md:py-20 bg-[#f8fafc] border-b border-gray-200">
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="max-w-5xl mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-gray-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+            <div className="lg:col-span-5 bg-gradient-to-br from-[#123B8F] to-[#0B2E73] p-5 sm:p-8 md:p-12 text-white flex flex-col justify-between relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#0756D9]/30 rounded-full blur-2xl" />
               <div className="relative z-10">
-                <div className="text-xs font-bold tracking-widest text-[#DCE9FF] uppercase mb-4">
+                <div className="text-[10px] sm:text-xs font-bold tracking-widest text-[#DCE9FF] uppercase mb-2 sm:mb-4">
                   SPECIAL EVENT ANNOUNCEMENT
                 </div>
-                <div className="inline-block bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs font-semibold mb-6">
-                  JANUARY 10, 2026
+                <div className="inline-block bg-white/10 backdrop-blur-md px-3 py-1 sm:px-4 sm:py-2 rounded-full text-[10px] sm:text-xs font-semibold mb-3 sm:mb-6">
+                  JANUARY 10, 2027
                 </div>
-                <h3 className="text-3xl md:text-4xl font-extrabold text-white leading-tight uppercase mb-4">
+                <h3 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight uppercase mb-2 sm:mb-4">
                   Delhi International Book Fair
                 </h3>
-                <p className="text-[#DCE9FF] text-sm leading-relaxed mb-6">
+                <p className="text-[#DCE9FF] text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
                   Launch your book at NBT's premier literature showcase and connect with readers worldwide.
                 </p>
               </div>
 
-              <div className="relative z-10 pt-6 border-t border-white/20">
-                <p className="font-serif italic text-sm text-[#DCE9FF]">
+              <div className="relative z-10 pt-3 sm:pt-6 border-t border-white/20">
+                <p className="font-serif italic text-xs sm:text-sm text-[#DCE9FF]">
                   #BLUEWHALEPUBLICATIONS
                 </p>
               </div>
             </div>
 
-            <div className="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between bg-white">
+            <div className="lg:col-span-7 p-5 sm:p-8 md:p-12 flex flex-col justify-between bg-white">
               <div>
-                <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-semibold text-gray-500 tracking-widest uppercase mb-6 pb-4 border-b border-gray-100">
+                <div className="flex flex-wrap items-center justify-between gap-1.5 text-[10px] sm:text-xs font-semibold text-gray-500 tracking-widest uppercase mb-3 sm:mb-6 pb-2 sm:pb-4 border-b border-gray-100">
                   <span>@BLUEWHALE_PUBLICATIONS</span>
                   <span>WWW.BLUEWHALEPUBLICATIONS.COM</span>
                 </div>
 
-                <h2 className="text-3xl md:text-5xl font-extrabold text-[#0B2E73] leading-tight mb-4 tracking-tight">
+                <h2 className="text-lg sm:text-3xl md:text-5xl font-extrabold text-[#0B2E73] leading-tight mb-3 sm:mb-4 tracking-tight">
                   Launch Your Book At{' '}
                   <span className="text-[#0756D9]">NBT's Delhi International Book Fair</span>
                 </h2>
 
-                <div className="my-6 p-6 bg-[#EEF5FF] rounded-2xl border-l-4 border-[#0756D9]">
-                  <p className="font-serif italic text-[#0B2E73] text-base md:text-lg leading-relaxed">
+                <div className="my-3 sm:my-6 p-3.5 sm:p-6 bg-[#EEF5FF] rounded-xl sm:rounded-2xl border-l-4 border-[#0756D9]">
+                  <p className="font-serif italic text-[#0B2E73] text-xs sm:text-base md:text-lg leading-relaxed">
                     "Your story deserves more than a page. It deserves a place in the world & every great book begins with one brave decision: to begin."
                   </p>
                 </div>
 
-                <p className="text-[#123B8F] text-sm md:text-base font-semibold mb-6">
+                <p className="text-[#123B8F] text-xs sm:text-sm md:text-base font-semibold mb-3 sm:mb-6">
                   Let your words flow and make the world more poetic!
                 </p>
               </div>
 
-              <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
+              <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center gap-2.5 sm:gap-4">
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center bg-[#0756D9] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#0648b8] transition-all shadow-md"
+                  className="w-full sm:w-auto inline-flex items-center justify-center bg-[#0756D9] text-white px-5 py-2.5 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl text-xs sm:text-base font-bold hover:bg-[#0648b8] transition-all shadow-md"
                 >
                   Publish With Us Now
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-1.5 w-4 h-4 sm:w-5 sm:h-5" />
                 </Link>
                 <Link
                   to="/services"
-                  className="w-full sm:w-auto inline-flex items-center justify-center border border-[#0756D9] text-[#0756D9] px-6 py-4 rounded-xl font-bold hover:bg-[#EEF5FF] transition-all"
+                  className="w-full sm:w-auto inline-flex items-center justify-center border border-[#0756D9] text-[#0756D9] px-5 py-2.5 sm:px-6 sm:py-4 rounded-lg sm:rounded-xl text-xs sm:text-base font-bold hover:bg-[#EEF5FF] transition-all"
                 >
                   View Packages
                 </Link>
@@ -266,51 +266,51 @@ export default function Home() {
       <ScrollStorySection />
 
       {/* Featured Books Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 fade-in-section">
+      <section className="py-10 md:py-24 bg-white">
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="text-center mb-8 sm:mb-16 fade-in-section">
             <span className="text-[#0756D9] text-xs font-extrabold uppercase tracking-widest bg-[#EEF5FF] px-4 py-1.5 rounded-full mb-3 inline-block">
               OUR CATALOG
             </span>
-            <h2 className="text-4xl md:text-6xl font-extrabold text-[#0B2E73] mb-4 uppercase tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-[#0B2E73] mb-3 sm:mb-4 uppercase tracking-tight">
               Featured Publications
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 text-sm sm:text-lg max-w-2xl mx-auto">
               Discover our latest bestselling authors and their incredible stories published across genres
             </p>
           </div>
 
-          <div className="stagger-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredBooks.slice(0, 8).map((book) => (
+          <div className="stagger-cards grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+            {featuredBooks.slice(0, 4).map((book) => (
               <BookCard key={book.id} book={book} />
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <Link
               to="/authors"
-              className="inline-flex items-center justify-center bg-[#EEF5FF] text-[#0756D9] hover:bg-[#0756D9] hover:text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 border border-[#DCE9FF] group"
+              className="inline-flex items-center justify-center bg-[#EEF5FF] text-[#0756D9] hover:bg-[#0756D9] hover:text-white font-bold px-6 py-3 sm:px-8 sm:py-4 rounded-xl transition-all duration-300 border border-[#DCE9FF] text-xs sm:text-base group"
             >
               View All Books & Authors
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us / Bluewhale Advantage */}
-      <section className="py-24 bg-[#f8fafc]">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 fade-in-section">
+      <section className="py-10 md:py-24 bg-[#f8fafc]">
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="text-center mb-8 sm:mb-16 fade-in-section">
             <span className="text-[#0756D9] text-xs font-extrabold uppercase tracking-widest bg-[#DCE9FF] px-4 py-1.5 rounded-full mb-3 inline-block">
               WHY CHOOSE US
             </span>
-            <h2 className="text-4xl md:text-6xl font-extrabold text-[#0B2E73] mb-4 uppercase tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-[#0B2E73] mb-3 sm:mb-4 uppercase tracking-tight">
               The Bluewhale Advantage
             </h2>
           </div>
 
-          <div className="stagger-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="stagger-cards grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {[
               {
                 title: 'Publication-Ready Writing',
@@ -331,13 +331,15 @@ export default function Home() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="card-item bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 hover:border-[#0756D9]/50 hover:-translate-y-1"
+                className="card-item bg-white p-3.5 sm:p-8 rounded-xl sm:rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 hover:border-[#0756D9]/50 hover:-translate-y-1 flex flex-col justify-between h-full"
               >
-                <div className="w-12 h-12 bg-[#0756D9] rounded-xl flex items-center justify-center mb-6 shadow-md shadow-[#0756D9]/30">
-                  <span className="text-2xl font-black text-white">{index + 1}</span>
+                <div>
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-[#0756D9] rounded-lg sm:rounded-xl flex items-center justify-center mb-2.5 sm:mb-6 shadow-md shadow-[#0756D9]/30">
+                    <span className="text-base sm:text-2xl font-black text-white">{index + 1}</span>
+                  </div>
+                  <h3 className="text-xs sm:text-xl font-bold text-[#0B2E73] mb-1 sm:mb-3 leading-snug">{feature.title}</h3>
+                  <p className="text-gray-600 text-[11px] sm:text-sm leading-relaxed">{feature.description}</p>
                 </div>
-                <h3 className="text-xl font-bold text-[#0B2E73] mb-3">{feature.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -345,7 +347,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-[#0B2E73] via-[#123B8F] to-[#0B2E73] text-white relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-gradient-to-r from-[#0B2E73] via-[#123B8F] to-[#0B2E73] text-white relative overflow-hidden">
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight">
             Start Your Journey Today

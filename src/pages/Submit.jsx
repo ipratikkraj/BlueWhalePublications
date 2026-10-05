@@ -43,33 +43,52 @@ export default function Submit() {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: 'Manuscript Submitted!',
-        description: 'We\'ll review your submission and get back to you within 2-3 weeks.',
-      });
-      
-      // Reset form
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        bookTitle: '',
-        genre: '',
-        wordCount: '',
-        synopsis: '',
-        previouslyPublished: 'no',
-        hearAboutUs: '',
-      });
-      setFile(null);
-      setIsSubmitting(false);
-    }, 2000);
+    const subjectText = `[Manuscript Submission] ${formData.bookTitle || 'New Manuscript'} - ${formData.firstName} ${formData.lastName}`;
+    
+    const bodyText = 
+      `MANUSCRIPT SUBMISSION DETAILS:\n` +
+      `----------------------------------------\n` +
+      `Author Name: ${formData.firstName} ${formData.lastName}\n` +
+      `Email Address: ${formData.email}\n` +
+      `Phone Number: ${formData.phone}\n` +
+      `Book Title: ${formData.bookTitle}\n` +
+      `Genre: ${formData.genre}\n` +
+      `Estimated Word Count: ${formData.wordCount}\n` +
+      `Previously Published: ${formData.previouslyPublished}\n` +
+      `How You Heard About Us: ${formData.hearAboutUs}\n` +
+      `Selected File Name: ${file ? file.name : 'No file attached'}\n\n` +
+      `SYNOPSIS / OVERVIEW:\n` +
+      `----------------------------------------\n` +
+      `${formData.synopsis}\n\n` +
+      `(Note: Please attach your manuscript document file to this email if applicable.)`;
+
+    const mailtoUrl = `mailto:publicationsbluewhale@gmail.com?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+
+    window.location.href = mailtoUrl;
+
+    toast({
+      title: 'Opening Mail Composer...',
+      description: 'Your manuscript details template has been created. Please attach your document and click send.',
+    });
+    
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      bookTitle: '',
+      genre: '',
+      wordCount: '',
+      synopsis: '',
+      previouslyPublished: 'no',
+      hearAboutUs: '',
+    });
+    setFile(null);
+    setIsSubmitting(false);
   };
 
   const genres = [
@@ -90,17 +109,17 @@ export default function Submit() {
   return (
     <div className="min-h-screen bg-[#1a1c1b] pt-24">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative pt-6 pb-10 md:py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#d9fb06] rounded-full blur-3xl" />
         </div>
         
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-3 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-black text-[#d9fb06] mb-6 uppercase">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-[#d9fb06] mb-4 sm:mb-6 uppercase">
               Submit Your Manuscript
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
+            <p className="text-sm sm:text-xl text-white/80 leading-relaxed">
               Ready to publish your book? Fill out the form below and upload your manuscript. 
               We'll review it carefully and get back to you soon.
             </p>
@@ -109,10 +128,10 @@ export default function Submit() {
       </section>
 
       {/* Form Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
+      <section className="py-10 md:py-20">
+        <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-3xl mx-auto">
-            <form onSubmit={handleSubmit} className="bg-[#302f2c] p-8 md:p-12 rounded-lg border border-[#3f4816]/30">
+            <form onSubmit={handleSubmit} className="bg-[#302f2c] p-5 sm:p-8 md:p-12 rounded-lg border border-[#3f4816]/30">
               {/* Personal Information */}
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-[#d9fb06] mb-6 uppercase">

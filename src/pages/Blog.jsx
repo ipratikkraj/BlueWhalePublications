@@ -38,17 +38,17 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-[#1a1c1b] pt-24">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative pt-6 pb-10 md:py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-[#d9fb06] rounded-full blur-3xl" />
         </div>
         
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-3 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center fade-in-section">
-            <h1 className="text-5xl md:text-7xl font-black text-[#d9fb06] mb-6 uppercase">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-[#d9fb06] mb-4 sm:mb-6 uppercase">
               Blog & Resources
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
+            <p className="text-sm sm:text-xl text-white/80 leading-relaxed">
               Expert insights, tips, and guides for aspiring and established authors
             </p>
           </div>
@@ -56,7 +56,7 @@ export default function Blog() {
       </section>
 
       {/* Blog Section */}
-      <section className="py-20">
+      <section className="py-10 md:py-20">
         <div className="container mx-auto px-6">
           {/* Search and Filters */}
           <div className="mb-12 space-y-6">

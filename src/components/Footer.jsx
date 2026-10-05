@@ -7,8 +7,8 @@ export const Footer = () => {
 
   return (
     <footer className="bg-[#0B2E73] text-white border-t border-[#0756D9]/30 pt-16 pb-8">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div className="container mx-auto px-3 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Brand Section */}
           <div>
             <Link to="/" className="flex items-center space-x-3 mb-4 group">
@@ -53,60 +53,67 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-bold text-lg mb-4 tracking-wide border-b border-[#0756D9]/40 pb-2 inline-block">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/about" className="text-[#DCE9FF]/80 hover:text-white text-sm transition-colors flex items-center">
-                  <span className="text-[#0756D9] mr-2">›</span> About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-[#DCE9FF]/80 hover:text-white text-sm transition-colors flex items-center">
-                  <span className="text-[#0756D9] mr-2">›</span> Our Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/authors" className="text-[#DCE9FF]/80 hover:text-white text-sm transition-colors flex items-center">
-                  <span className="text-[#0756D9] mr-2">›</span> Authors & Books
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-[#DCE9FF]/80 hover:text-white text-sm transition-colors flex items-center">
-                  <span className="text-[#0756D9] mr-2">›</span> Contact Us
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Quick Links & Services in same inline row on mobile */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-2 grid grid-cols-2 gap-4 sm:gap-8">
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-white font-bold text-base sm:text-lg mb-3 sm:mb-4 tracking-wide border-b border-[#0756D9]/40 pb-2 inline-block">Quick Links</h3>
+              <ul className="space-y-2.5 sm:space-y-3">
+                <li>
+                  <Link to="/about" className="text-[#DCE9FF]/80 hover:text-white text-xs sm:text-sm transition-colors flex items-center">
+                    <span className="text-[#0756D9] mr-1.5 sm:mr-2">›</span> About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="text-[#DCE9FF]/80 hover:text-white text-xs sm:text-sm transition-colors flex items-center">
+                    <span className="text-[#0756D9] mr-1.5 sm:mr-2">›</span> Our Services
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/authors" className="text-[#DCE9FF]/80 hover:text-white text-xs sm:text-sm transition-colors flex items-center">
+                    <span className="text-[#0756D9] mr-1.5 sm:mr-2">›</span> Authors & Books
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="text-[#DCE9FF]/80 hover:text-white text-xs sm:text-sm transition-colors flex items-center">
+                    <span className="text-[#0756D9] mr-1.5 sm:mr-2">›</span> Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-white font-bold text-lg mb-4 tracking-wide border-b border-[#0756D9]/40 pb-2 inline-block">Services</h3>
-            <ul className="space-y-3">
-              <li className="text-[#DCE9FF]/80 text-sm flex items-center"><span className="text-[#0756D9] mr-2">•</span> Book Publishing</li>
-              <li className="text-[#DCE9FF]/80 text-sm flex items-center"><span className="text-[#0756D9] mr-2">•</span> Professional Editing</li>
-              <li className="text-[#DCE9FF]/80 text-sm flex items-center"><span className="text-[#0756D9] mr-2">•</span> Cover & Layout Design</li>
-              <li className="text-[#DCE9FF]/80 text-sm flex items-center"><span className="text-[#0756D9] mr-2">•</span> Marketing & Distribution</li>
-              <li className="text-[#DCE9FF]/80 text-sm flex items-center"><span className="text-[#0756D9] mr-2">•</span> Author Branding</li>
-            </ul>
+            {/* Services */}
+            <div>
+              <h3 className="text-white font-bold text-base sm:text-lg mb-3 sm:mb-4 tracking-wide border-b border-[#0756D9]/40 pb-2 inline-block">Services</h3>
+              <ul className="space-y-2.5 sm:space-y-3">
+                <li className="text-[#DCE9FF]/80 text-xs sm:text-sm flex items-center"><span className="text-[#0756D9] mr-1.5 sm:mr-2">•</span> Book Publishing</li>
+                <li className="text-[#DCE9FF]/80 text-xs sm:text-sm flex items-center"><span className="text-[#0756D9] mr-1.5 sm:mr-2">•</span> Professional Editing</li>
+                <li className="text-[#DCE9FF]/80 text-xs sm:text-sm flex items-center"><span className="text-[#0756D9] mr-1.5 sm:mr-2">•</span> Cover & Layout Design</li>
+                <li className="text-[#DCE9FF]/80 text-xs sm:text-sm flex items-center"><span className="text-[#0756D9] mr-1.5 sm:mr-2">•</span> Marketing & Distribution</li>
+                <li className="text-[#DCE9FF]/80 text-xs sm:text-sm flex items-center"><span className="text-[#0756D9] mr-1.5 sm:mr-2">•</span> Author Branding</li>
+              </ul>
+            </div>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4 tracking-wide border-b border-[#0756D9]/40 pb-2 inline-block">Contact Us</h3>
+            <h3 className="text-white font-bold text-base sm:text-lg mb-3 sm:mb-4 tracking-wide border-b border-[#0756D9]/40 pb-2 inline-block">Contact Us</h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3 text-[#DCE9FF]/80 text-sm">
-                <MapPin className="w-5 h-5 flex-shrink-0 text-[#0756D9] mt-0.5" />
+              <li className="flex items-start space-x-3 text-[#DCE9FF]/80 text-xs sm:text-sm">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 text-[#0756D9] mt-0.5" />
                 <span>U Block, Sector 24, Gurugram, Haryana 122002, India</span>
               </li>
-              <li className="flex items-center space-x-3 text-[#DCE9FF]/80 text-sm">
-                <Phone className="w-5 h-5 flex-shrink-0 text-[#0756D9]" />
-                <span>+91 8252395376</span>
+              <li className="flex items-center space-x-3 text-[#DCE9FF]/80 text-xs sm:text-sm">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 text-[#0756D9]" />
+                <a href="tel:+918252395376" className="hover:text-white transition-colors">
+                  +91 8252395376
+                </a>
               </li>
-              <li className="flex items-center space-x-3 text-[#DCE9FF]/80 text-sm">
-                <Mail className="w-5 h-5 flex-shrink-0 text-[#0756D9]" />
-                <span className="break-all">publicationsbluewhale@gmail.com</span>
+              <li className="flex items-center space-x-3 text-[#DCE9FF]/80 text-xs sm:text-sm">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 text-[#0756D9]" />
+                <a href="mailto:publicationsbluewhale@gmail.com" className="break-all hover:text-white transition-colors">
+                  publicationsbluewhale@gmail.com
+                </a>
               </li>
             </ul>
           </div>

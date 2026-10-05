@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-export const CountUp = ({ end, duration = 2000, suffix = '', prefix = '' }) => {
+export const CountUp = ({ end, duration = 2000, suffix = '', prefix = '', className = '' }) => {
   const [count, setCount] = useState(0);
   const countRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -57,7 +57,7 @@ export const CountUp = ({ end, duration = 2000, suffix = '', prefix = '' }) => {
   }, [hasAnimated, end, duration]);
 
   return (
-    <div ref={countRef} className="text-5xl md:text-6xl font-black text-[#d9fb06]">
+    <div ref={countRef} className={className || "text-2xl md:text-5xl font-black text-[#d9fb06]"}>
       {prefix}{count}{suffix}
     </div>
   );

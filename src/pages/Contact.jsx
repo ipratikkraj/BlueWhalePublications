@@ -20,43 +20,58 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      toast({
-        title: 'Message Sent!',
-        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
-      });
+    const subjectText = formData.subject ? `[Website Message] ${formData.subject}` : 'Website Message - Bluewhale Publications';
+    
+    const bodyText = 
+      `INQUIRY DETAILS:\n` +
+      `----------------------------------------\n` +
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Subject: ${formData.subject}\n\n` +
+      `MESSAGE:\n` +
+      `----------------------------------------\n` +
+      `${formData.message}`;
 
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-      setIsSubmitting(false);
-    }, 1200);
+    const mailtoUrl = `mailto:publicationsbluewhale@gmail.com?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+
+    // Open mail app to compose email
+    window.location.href = mailtoUrl;
+
+    toast({
+      title: 'Opening Mail Composer...',
+      description: "Your message template has been created. Click send in your mail app to deliver your message.",
+    });
+
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
+    setIsSubmitting(false);
   };
 
   return (
     <div className="min-h-screen bg-[#EEF5FF] text-[#0B2E73] pt-24">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-b from-[#0B2E73] to-[#123B8F] text-white overflow-hidden">
+      <section className="relative pt-6 pb-10 md:py-20 bg-gradient-to-b from-[#0B2E73] to-[#123B8F] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-0 left-0 w-96 h-96 bg-[#0756D9] rounded-full blur-3xl" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="text-[#DCE9FF] text-xs md:text-sm font-extrabold uppercase tracking-widest bg-[#0756D9]/30 px-4 py-1.5 rounded-full mb-4 inline-block">
+            <span className="text-[#DCE9FF] text-xs md:text-sm font-extrabold uppercase tracking-widest bg-[#0756D9]/30 px-4 py-1.5 rounded-full mb-3 md:mb-4 inline-block">
               WE ARE HERE FOR YOU
             </span>
-            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tight">
               Get In Touch
             </h1>
-            <p className="text-lg md:text-xl text-[#DCE9FF] leading-relaxed max-w-2xl mx-auto">
+            <p className="text-sm sm:text-lg md:text-xl text-[#DCE9FF] leading-relaxed max-w-2xl mx-auto">
               Have questions about manuscript submission, editing, or publishing packages? We're here to guide you every step of the way.
             </p>
           </div>
@@ -64,13 +79,13 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="py-10 md:py-24">
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Form */}
             <div>
-              <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-[#DCE9FF]">
-                <h2 className="text-2xl md:text-3xl font-extrabold text-[#0B2E73] mb-6 uppercase tracking-tight">
+              <div className="bg-white p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl shadow-xl border border-[#DCE9FF]">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#0B2E73] mb-4 sm:mb-6 uppercase tracking-tight">
                   Send Us a Message
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -161,26 +176,32 @@ export default function Contact() {
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-start space-x-4 bg-white p-6 rounded-2xl border border-[#DCE9FF] shadow-sm hover:shadow-md transition-all">
-                  <div className="w-12 h-12 bg-[#0756D9] rounded-xl flex items-center justify-center flex-shrink-0 text-white shadow-md shadow-[#0756D9]/30">
+                <a
+                  href="mailto:publicationsbluewhale@gmail.com"
+                  className="flex items-start space-x-4 bg-white p-6 rounded-2xl border border-[#DCE9FF] shadow-sm hover:shadow-md hover:border-[#0756D9]/50 transition-all group block"
+                >
+                  <div className="w-12 h-12 bg-[#0756D9] rounded-xl flex items-center justify-center flex-shrink-0 text-white shadow-md shadow-[#0756D9]/30 group-hover:scale-105 transition-transform">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-[#0B2E73] font-bold text-base mb-1">Email Support</h3>
-                    <p className="text-[#0756D9] font-medium break-all text-sm">publicationsbluewhale@gmail.com</p>
+                    <h3 className="text-[#0B2E73] font-bold text-base mb-1 group-hover:text-[#0756D9] transition-colors">Email Support</h3>
+                    <p className="text-[#0756D9] font-medium break-all text-sm group-hover:underline">publicationsbluewhale@gmail.com</p>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-start space-x-4 bg-white p-6 rounded-2xl border border-[#DCE9FF] shadow-sm hover:shadow-md transition-all">
-                  <div className="w-12 h-12 bg-[#0756D9] rounded-xl flex items-center justify-center flex-shrink-0 text-white shadow-md shadow-[#0756D9]/30">
+                <a
+                  href="tel:+918252395376"
+                  className="flex items-start space-x-4 bg-white p-6 rounded-2xl border border-[#DCE9FF] shadow-sm hover:shadow-md hover:border-[#0756D9]/50 transition-all group block"
+                >
+                  <div className="w-12 h-12 bg-[#0756D9] rounded-xl flex items-center justify-center flex-shrink-0 text-white shadow-md shadow-[#0756D9]/30 group-hover:scale-105 transition-transform">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-[#0B2E73] font-bold text-base mb-1">Phone / WhatsApp</h3>
-                    <p className="text-[#0756D9] font-bold text-sm">+91 8252395376</p>
+                    <h3 className="text-[#0B2E73] font-bold text-base mb-1 group-hover:text-[#0756D9] transition-colors">Phone / WhatsApp</h3>
+                    <p className="text-[#0756D9] font-bold text-sm group-hover:underline">+91 8252395376</p>
                     <p className="text-[#123B8F]/70 text-xs mt-0.5">Mon-Sat: 9:00 AM - 9:00 PM IST</p>
                   </div>
-                </div>
+                </a>
 
                 <div className="flex items-start space-x-4 bg-white p-6 rounded-2xl border border-[#DCE9FF] shadow-sm hover:shadow-md transition-all">
                   <div className="w-12 h-12 bg-[#0756D9] rounded-xl flex items-center justify-center flex-shrink-0 text-white shadow-md shadow-[#0756D9]/30">
@@ -191,24 +212,6 @@ export default function Contact() {
                     <p className="text-[#123B8F]/80 text-sm font-medium">
                       U Block, Sector 24, Gurugram, Haryana 122002, India
                     </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Office Hours */}
-              <div className="bg-gradient-to-r from-[#0B2E73] to-[#123B8F] p-8 rounded-3xl text-white shadow-xl">
-                <div className="flex items-center space-x-3 mb-4">
-                  <Clock className="w-6 h-6 text-[#DCE9FF]" />
-                  <h3 className="text-xl font-extrabold text-white">Working Hours</h3>
-                </div>
-                <div className="space-y-3 text-sm text-[#DCE9FF]">
-                  <div className="flex justify-between border-b border-white/10 pb-2">
-                    <span>Monday - Saturday</span>
-                    <span className="font-bold text-white">9:00 AM - 9:00 PM IST</span>
-                  </div>
-                  <div className="flex justify-between pt-1">
-                    <span>Sunday</span>
-                    <span className="text-white/60">Closed</span>
                   </div>
                 </div>
               </div>

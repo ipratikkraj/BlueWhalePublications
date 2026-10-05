@@ -32,16 +32,16 @@ export const Navbar = () => {
           : 'bg-gradient-to-b from-black/70 via-black/30 to-transparent py-5'
       }`}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-3 sm:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group">
             <img
               src="/logo.svg"
               alt="Bluewhale Publications Logo"
               className="h-8 md:h-10 w-auto transition-transform group-hover:scale-105 filter drop-shadow"
             />
-            <span className="text-2xl font-black tracking-tight text-white">
+            <span className="text-lg sm:text-xl md:text-2xl font-black tracking-tighter sm:tracking-tight text-white whitespace-nowrap">
               <span className="text-[#0756D9]">Bluewhale</span> Publications
             </span>
           </Link>
